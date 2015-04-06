@@ -15,7 +15,9 @@ var bookmymove = angular.module('bookmymove',[
   'vcRecaptcha',
   'named-views.aboutus',
   'named-views.registration',
-  'named-views.vendor'
+  'named-views.vendor',
+  'named-views.map',
+  'named-views.feedback',
 ]);
 bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider,$mdThemingProvider){
 	$stateProvider.state('home',{
@@ -31,10 +33,6 @@ bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
           templateUrl: 'footer.html'
         }
       }   
-    }).state('map',{
-      url: '/map',
-      templateUrl: 'map.html',
-      controller: 'MapCtrl'
     }).state('feedback', {
       url: '/feedback',
       templateUrl: 'feedback.html',
